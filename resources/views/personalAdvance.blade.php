@@ -1,0 +1,90 @@
+@extends('layouts.app')
+@section('content')
+<div class="container-fluid">
+    <div class="row">
+        <!-- Sidebar -->
+        <div class="col-md-8 sidebar">
+            <ul class="nav flex-column">
+                <li class="nav-item sidetext-color d-flex align-items-center {{ request()->is('dashboard') ? 'fw-bold sidebar-bg' : '' }}">
+                    <img src="img/reference.png" alt="Reference Icon" class="sidebar-icon">
+                    <a href="{{ route('dashboard') }}" class="ml-2">Reference</a>
+                </li>
+                <li class="nav-item sidetext-color d-flex align-items-center {{ request()->is('dashboard') ? 'font-weight-bold ' : '' }}">
+                    <img src="img/customization.png" alt="Customization Icon" class="sidebar-icon">
+                    <a href="{{ route('dashboard') }}" class="ml-2">Customization</a>
+                </li>
+                <li class="nav-item sidetext-color d-flex align-items-center {{ request()->is('dashboard') ? 'font-weight-bold' : '' }}">
+                    <img src="img/transaction.png" alt="Transactions Icon" class="sidebar-icon">
+                    <a href="{{ route('dashboard') }}" class="ml-2">Transactions</a>
+                </li>
+                <li class="nav-item sidetext-color d-flex align-items-center {{ request()->is('dashboard') ? 'font-weight-bold' : '' }}">
+                    <img src="img/history.png" alt="History Icon" class="sidebar-icon">
+                    <a href="{{ route('dashboard') }}" class="ml-2">History</a>
+                </li>
+                <li class="nav-item d-flex align-items-center side-bottom-text fw-bold">
+                    <p>Woodcraftify Copyright @ 2023</p>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <main role="main" class="col-md-12 main-content">
+            <!-- Your content goes here -->
+            <h1 class="ml-4 mt-2 fs-3 fw-bold" style="color: var(--csk-776-a-3-c-800, #443D22);">Personal Customization</h1>
+            <div class="row row-cols-md-3 g-4">
+                <div class="card personal-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                    </div>
+                    <img src="img/tes card.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <button type="button" class="btn btn-reference-pick text-light fs-6">Make A Deal</button>
+                    </div>
+                </div>
+                <form style="max-width: 700px; width: 100%; margin: 0 auto; border:">
+                    <div class="row mt-4">
+                        <div class="col">
+                            <label for="exampleInputEmail1" class="form-label">Name Your Furniture</label>
+                            <input type="text" class="form-control rounded-form" style="height: 50px; border-color: var(--csk-776-a-3-c-200, #DDD6BB);" id="exampleInputEmail1" placeholder="Name">
+                        </div>
+                    </div>
+
+                    <div class="row mb-3 mt-3 pt-2">
+                        <div class="col">
+                            <label for="exampleInputPassword1" class="form-label">Fill How Many Do You Want</label>
+                            <input type="number" class="form-control rounded-form" style="height: 50px; border-color: var(--csk-776-a-3-c-200, #DDD6BB);" id="exampleInputPassword1" placeholder="Quantity">
+                        </div>
+                    </div>
+
+                    <div class="row mb-3 mt-3 pt-2">
+                        <div class="col">
+                            <label for="exampleInputPassword1" class="form-label">Fill What Color Do You Want</label>
+                            <input type="text" class="form-control rounded-form" style="height: 50px; border-color: var(--csk-776-a-3-c-200, #DDD6BB);" id="exampleInputPassword1" placeholder="Color">
+                        </div>
+                    </div>
+
+                    <div class="row mb-3 mt-3 pt-2">
+                        <h1 class="mb-3">Fill In The Dimensions You Want</h1>
+                        <div class="col">
+                            <input type="number" class="form-control rounded-form" style="height: 50px; border-color: var(--csk-776-a-3-c-200, #DDD6BB);" id="exampleInputPassword2" placeholder="Length">
+                        </div>
+                        <div class="col">
+                            <input type="number" class="form-control rounded-form" style="height: 50px; border-color: var(--csk-776-a-3-c-200, #DDD6BB);" id="exampleInputPassword3" placeholder="Width">
+                        </div>
+                        <div class="col">
+                            <input type="number" class="form-control rounded-form" style="height: 50px; border-color: var(--csk-776-a-3-c-200, #DDD6BB);" id="exampleInputPassword3" placeholder="Height">
+                        </div>
+                    </div>
+                    <div class="row mb-3 mt-3 pt-2">
+                        <div class="col">
+                            <label for="exampleInputPassword4" class="form-label">Fill Your Side Notes</label>
+                            <textarea class="form-control rounded-form" style="height: 100px; border-color: var(--csk-776-a-3-c-200, #DDD6BB);" id="exampleInputPassword4" placeholder="Side Notes"></textarea>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </main>
+    </div>
+</div>
+@endsection
